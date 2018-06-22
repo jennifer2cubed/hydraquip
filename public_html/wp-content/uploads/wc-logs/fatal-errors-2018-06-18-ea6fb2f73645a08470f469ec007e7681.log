@@ -1,0 +1,8 @@
+2018-06-18T15:19:51+00:00 CRITICAL Call to a member function get_variation_regular_price() on a non-object
+
+2018-06-18T16:06:37+00:00 CRITICAL Call to undefined function get_the_thumbnail_url()
+
+2018-06-18T16:08:07+00:00 CRITICAL Call to undefined function get_thumbnail_url()
+
+2018-06-18T16:08:15+00:00 CRITICAL Call to undefined function get_thumbnail_url()
+

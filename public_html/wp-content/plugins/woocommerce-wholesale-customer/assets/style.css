@@ -1,0 +1,25 @@
+form.whc_register_form input,form.whc_register_form select {
+    width: 300px;
+    max-width: 100%;
+	background-color: #e4e4e4;
+    border-radius: 3px;
+    border: 1px solid #9c9c9c;
+}
+form.whc_register_form input[type="submit"]{
+	background-color: #f27b21;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-color: #e1711c;
+}
+form.whc_register_form>div{
+	padding: 20px 0;
+}
+
+.not_approved {
+    background-color: #f27b21;
+    color: #fff;
+    padding: 5px;
+    border-radius: 4px;
+    font-weight: bold;
+}

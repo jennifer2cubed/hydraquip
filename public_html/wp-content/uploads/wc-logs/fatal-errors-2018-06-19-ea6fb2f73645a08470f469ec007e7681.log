@@ -1,0 +1,6 @@
+2018-06-19T11:02:27+00:00 CRITICAL Call to undefined function get_price_excluding_tax()
+
+2018-06-19T11:02:40+00:00 CRITICAL Call to undefined function wp_get_price_excluding_tax()
+
+2018-06-19T11:04:08+00:00 CRITICAL Call to undefined function wp_get_price_excluding_tax()
+

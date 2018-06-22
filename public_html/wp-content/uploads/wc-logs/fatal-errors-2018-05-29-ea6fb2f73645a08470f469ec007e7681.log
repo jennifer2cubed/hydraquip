@@ -1,0 +1,24 @@
+2018-05-29T15:11:31+00:00 CRITICAL Call to undefined function get_availability()
+
+2018-05-29T15:46:00+00:00 CRITICAL Call to a member function get_availability() on a non-object
+
+2018-05-29T15:47:51+00:00 CRITICAL Call to undefined function get_stock_status()
+
+2018-05-29T15:48:31+00:00 CRITICAL Call to a member function get_stock_status() on a non-object
+
+2018-05-29T15:49:37+00:00 CRITICAL Call to a member function get_stock_status() on a non-object
+
+2018-05-29T15:50:04+00:00 CRITICAL Call to a member function get_stock_status() on a non-object
+
+2018-05-29T15:53:20+00:00 CRITICAL Call to a member function get_stock_quantity() on a non-object
+
+2018-05-29T15:54:44+00:00 CRITICAL Call to a member function get_stock_quantity() on a non-object
+
+2018-05-29T15:54:54+00:00 CRITICAL Call to a member function get_stock_quantity() on a non-object
+
+2018-05-29T15:59:52+00:00 CRITICAL Call to a member function stock() on a non-object
+
+2018-05-29T16:00:29+00:00 CRITICAL Call to a member function stock() on a non-object
+
+2018-05-29T16:15:41+00:00 CRITICAL Call to a member function get_stock_quantity() on a non-object
+
