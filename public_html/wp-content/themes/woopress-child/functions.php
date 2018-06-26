@@ -3,6 +3,27 @@ function theme_enqueue_styles() {
     wp_enqueue_style( 'child-style', get_stylesheet_uri(), array( 'bootstrap', 'parent-style' ) );
 }
 
+/****************************************************
+******************* HOOKS ***************************
+****************************************************/
+
+// Custom hooks for single product page
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10 );
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 30 );
+
+//add_action( 'tc_product_add_to_cart_column', 'woocommerce_stock_html', 5 );
+add_action( 'tc_product_add_to_cart_column', 'woocommerce_template_single_price', 10 );
+add_action( 'tc_product_add_to_cart_column', 'price_excluding_vat', 20 );
+add_action( 'tc_product_add_to_cart_column', 'woocommerce_template_single_add_to_cart', 30 );
+
+add_action( 'woocommerce_single_product_summary', 'product_supplier_fnc', 6 );
+add_action( 'woocommerce_single_product_summary', 'product_social_share', 11 );
+
+//Archive product list
+
+
+
+
 add_shortcode('footer','footer');
 function footer() {
 	ob_start();
@@ -560,18 +581,6 @@ global $woocommerce;
 	}
 }
 
-// Custom hooks for single product page
-remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10 );
-remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 30 );
-
-//add_action( 'tc_product_add_to_cart_column', 'woocommerce_stock_html', 5 );
-add_action( 'tc_product_add_to_cart_column', 'woocommerce_template_single_price', 10 );
-add_action( 'tc_product_add_to_cart_column', 'price_excluding_vat', 20 );
-add_action( 'tc_product_add_to_cart_column', 'woocommerce_template_single_add_to_cart', 30 );
-
-add_action( 'woocommerce_single_product_summary', 'product_supplier_fnc', 6 );
-add_action( 'woocommerce_single_product_summary', 'product_social_share', 11 );
-
 function price_excluding_vat() {
 	global $product;
 	$currency = get_woocommerce_currency_symbol();
@@ -847,20 +856,42 @@ function woo_rename_tabs( $tabs ) {
 
 add_filter( 'woocommerce_breadcrumb_defaults', 'category_breadcrumbs' );
 function category_breadcrumbs() {
-	 return array(
-            'delimiter'   => ' > ',
-            'wrap_before' => '<nav class="woocommerce-breadcrumb" itemprop="breadcrumb">',
-            'wrap_after'  => '</nav>',
-            'before'      => '',
-            'after'       => '',
-            'home'        => _x( '', 'breadcrumb', 'woocommerce' ),
-        );
+	if(is_product()) {
+		$cat_disp = 'Category: ';
+	} else {
+		$cat_disp = '';
+	}
+	
+	return array(
+		'delimiter'   => ' > ',
+		'wrap_before' => '<nav class="woocommerce-breadcrumb" itemprop="breadcrumb">'.$cat_disp,
+		'wrap_after'  => '</nav>',
+		'before'      => '',
+		'after'       => '',
+		'home'        => _x( '', 'breadcrumb', 'woocommerce' ),
+	);
 }
 
 add_action('woocommerce_product_meta_start','woocommerce_breadcrumb' );
 
 
-
+//Shop banner
+add_shortcode('shop_banner', 'shop_banner');
+function shop_banner() {
+	ob_start();
+	?>
+		<div class="shop_banner_wrapper row">
+			<div class="shop_banner_text col-md-8">
+				<h2>EXPERts in Hydraulics & Pneumatics</h2>
+				<p>Integer luctus urna non erat tincidunt semper. Fusce mi massa, facilisis vitae luctus ullamcorper, cursus eget odio.</p>
+			</div>
+			<div class="shop_banner_text col-md-4">
+				<img src="/wp-content/uploads/2018/06/gears.png">
+			</div>
+		</div>
+	<?php
+	return ob_get_clean();
+}
 
 
 

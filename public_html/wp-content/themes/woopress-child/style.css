@@ -689,6 +689,24 @@ a.checkout-button.button.alt.wc-forward {
 }
 
 /* Single Product */
+
+.row.single_product h1.title, .row.single_product span.posted_in {
+	display: none;
+}
+
+.row.single_product nav.woocommerce-breadcrumb {
+    text-align: left;
+}
+
+.row.single_product .page-heading.bc-type-3 {
+    padding-top: 0 !important;
+    padding-bottom: 8px;
+}
+
+.row.single_product .row .col-md-12.a-center {
+    padding: 0;
+}
+
 .product_breadcrumbs_main {
     width: 100%;
     border-bottom: 1px solid #f3f3f3;
@@ -867,7 +885,128 @@ embed.pdf_embed {
     height: 800px;
 }
 
+/* Shop page */
+.shop_banner_wrapper {
+    background-color: #0076bd;
+    padding: 20px;
+    position: relative;
+    z-index: 20;
+    display: block;
+}
 
+.shop_banner_text h2 {
+	color: #fff;
+	font-size: 45px;
+	text-transform: uppercase;
+}
+
+.shop_banner_text p {
+	color: #fff;
+	font-size: 16px;
+}
+
+.shop_banner_text.col-md-4 img {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+}
+
+.page-heading.bc-type-3 {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.col-md-12.a-center h1.title {
+    display: none;
+}
+
+nav.woocommerce-breadcrumb {
+    padding: 20px 0 20px 5px;
+    text-align: left;
+}
+
+.page-heading.bc-type-3 {
+    border-bottom: 1px solid #ccc;
+}
+
+.row.products-loop > .col-md-4 {
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+.archive_wrapper {
+    display: block;
+    padding: 12px;
+    transition: .7s;
+}
+
+.archive_wrapper:hover {
+    box-shadow: 0px 0px 20px 0px;
+}
+
+.archive_category {
+    color: #878787;
+    padding-bottom: 8px;
+}
+
+.archive_title a {
+    color: #0062bd;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 8px 0;
+}
+
+.archive_img img {
+    width: 100%;
+    height: 240px;
+    object-fit: contain;
+    background-color: #fff;
+    padding-bottom: 8px;
+}
+
+.archive_short_desc {
+    color: #7d7d7d;
+    font-size: 12px;
+    padding: 8px 0;
+}
+
+.archive_price {
+    font-size: 24px;
+}
+
+.archive_add_to_cart a i {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    background-color: #ddd;
+    color: #fff;
+    font-size: 24px;
+    border-radius: 50%;
+    padding-top: calc(50% - 22px);
+    transition: .5s;
+    margin: auto;
+    display: block;
+}
+
+.archive_add_to_cart a i:hover {
+    background-color: #0076bc;
+}
+
+.row.compare_wish {
+    margin-top: 18px;
+}
+
+.row.compare_wish .col-md-6 {
+    padding: 0;
+    text-align: center;
+}
+
+.row.compare_wish .btn_wrapper {
+    padding-top: 15px;
+    border-top: 1px solid #ddd;
+    width: 96%;
+    margin: auto;
+}
 
 /* Responsive */
 
